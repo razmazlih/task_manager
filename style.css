@@ -3,7 +3,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e8eff1; /* גוון כחול רך */
+    background-color: #e8eff1;
     color: #333;
     line-height: 1.6;
 }
@@ -14,10 +14,10 @@ body, html {
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
-    width: 90%; /* מוגבלת את הרוחב של הקונטיינר */
-    max-width: 1200px; /* מגביל את הרוחב המקסימלי */
-    margin-left: auto; /* ממרכז את הקונטיינר */
-    margin-right: auto; /* ממרכז את הקונטיינר */
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* עיצוב פריטים כללי */
@@ -32,33 +32,24 @@ body, html {
     transition: transform 0.3s ease;
 }
 
-/* עיצוב קישורים */
-a {
+/* עיצוב קישורים וכפתורים */
+a, button {
     text-decoration: none;
-    color: #3A95FF; /* כחול בהיר יותר */
+    color: #007BFF;
     font-weight: bold;
     transition: color 0.3s;
-}
-
-a:hover {
-    color: #2A75E0; /* כחול כהה יותר */
-}
-
-/* עיצוב כפתורים */
-button {
+    background-color: #007BFF;
     padding: 12px 24px;
     border: none;
     border-radius: 6px;
-    background-color: #3A95FF; /* כחול בהיר */
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    margin-top: 10px;
+    margin: 2px;
 }
 
-button:hover {
-    background-color: #2A75E0; /* כחול כהה */
-    transform: scale(1.05);
+a:hover, button:hover {
+    color: #d1e7ff;
+    background-color: #0056b3;
 }
 
 /* עיצוב אזור המשימות */
@@ -67,16 +58,15 @@ button:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
-    padding: 0 5px; /* מוסיף padding לצדדים כדי למנוע יציאה מהגבולות */
+    padding: 0 5px;
 }
 
 .task {
     padding: 15px;
     margin: 10px;
-    border: 1px solid #ccc; /* גוון אפור רך */
-    flex: 1 1 18%;
-    min-width: 180px; /* מינימום רוחב למשימה */
-    max-width: calc(20% - 20px); /* מקסימום רוחב למשימה */
+    border: 1px solid #ccc;
+    flex: 1 1 100%; /* תיקון גמישות המשימות */
+    min-width: 150px;
     background: #fff;
     border-radius: 6px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -99,22 +89,28 @@ input[type="date"], input[type="text"] {
 
 input:focus {
     outline: none;
-    border-color: #3A95FF; /* כחול בהיר */
+    border-color: #007BFF;
 }
 
-/* עיצוב נוסף לקישורים */
-.links {
-    display: flex;
-    justify-content: space-around;
+/* תצורה רספונסיבית למכשירים ניידים */
+@media (max-width: 768px) {
+    .container, .item {
+        width: 95%;
+    }
+
+    button, input[type="date"], input[type="text"], a {
+        padding: 15px;
+        font-size: 16px; /* גופן גדול יותר לניידים */
+    }
 }
 
-a {
-    background-color: #f0faff; /* כחול רך עם צל */
-    padding: 8px 16px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
+/* תצורה נוספת למכשירים קטנים מאוד */
+@media (max-width: 480px) {
+    .task {
+        flex: 1 1 100%; /* משימה אחת בשורה לניידים */
+    }
 
-a:hover {
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    button, a {
+        width: 100%; /* כפתורים וקישורים יתפרשו על כל הרוחב */
+    }
 }
