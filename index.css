@@ -1,0 +1,119 @@
+/* Basic reset and universal styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+
+.header {
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.links a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-right: 10px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.links a:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-right: 5px; /* spacing between buttons */
+}
+
+button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: #ecf0f1;
+    border-left: 5px solid #3498db;
+    border-radius: 5px;
+    position: relative;
+    transition: border-color 0.3s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* ensures content and buttons are spaced out */
+}
+
+.task.finished {
+    background-color: #e9ecef;
+    border-color: #2ecc71;
+    text-decoration: line-through;
+}
+
+.task div {
+    flex-grow: 1; /* allows the task description to fill space */
+}
+
+.task button {
+    opacity: 0.9;
+    transition: opacity 0.2s;
+}
+
+.task button:hover {
+    opacity: 1;
+}
+
+.task.finished button {
+    background-color: #e74c3c;
+}
+
+.task:not(.finished) button {
+    background-color: #f1c40f;
+}
+
+.task.finished button:hover {
+    background-color: #c0392b;
+}
+
+.task:not(.finished) button:hover {
+    background-color: #f39c12;
+}

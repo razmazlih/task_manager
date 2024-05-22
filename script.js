@@ -106,11 +106,3 @@ function updateStorge() {
 }
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
-// ניקוי localStorage
-// localStorage.clear();
-
-// יצירת משימות חדשות
-// createTask("Eat", "2.5.2024");
-// createTask("Drink", "3.5.2024");
-
