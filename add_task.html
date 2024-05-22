@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./media/icon.jpg" type="image/x-icon">
+    <title>Add task</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <h1>Add Task</h1>
+        </div>
+        <div class="item">
+            <a href="./index.html">Back</a>
+        </div>
+        <div class="item">
+            <input type="text" id="nameInput" placeholder="name">
+            <input type="date" id="dateInput" placeholder="Date">
+        </div>
+        <div class="item">
+            <button onclick="createTask(nameInput.value, dateInput.value)">Add</button>
+        </div>
+    </div>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

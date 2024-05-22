@@ -1,0 +1,120 @@
+/* עיצוב בסיסי וגופנים */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e8eff1; /* גוון כחול רך */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* קונטיינר ראשי */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 90%; /* מוגבלת את הרוחב של הקונטיינר */
+    max-width: 1200px; /* מגביל את הרוחב המקסימלי */
+    margin-left: auto; /* ממרכז את הקונטיינר */
+    margin-right: auto; /* ממרכז את הקונטיינר */
+}
+
+/* עיצוב פריטים כללי */
+.item {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+/* עיצוב קישורים */
+a {
+    text-decoration: none;
+    color: #3A95FF; /* כחול בהיר יותר */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #2A75E0; /* כחול כהה יותר */
+}
+
+/* עיצוב כפתורים */
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3A95FF; /* כחול בהיר */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2A75E0; /* כחול כהה */
+    transform: scale(1.05);
+}
+
+/* עיצוב אזור המשימות */
+#allTasks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0 5px; /* מוסיף padding לצדדים כדי למנוע יציאה מהגבולות */
+}
+
+.task {
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ccc; /* גוון אפור רך */
+    flex: 1 1 18%;
+    min-width: 180px; /* מינימום רוחב למשימה */
+    max-width: calc(20% - 20px); /* מקסימום רוחב למשימה */
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.task.finished {
+    color: #888;
+    text-decoration: line-through;
+}
+
+/* עיצוב שדות קלט */
+input[type="date"], input[type="text"] {
+    padding: 10px;
+    margin-top: 5px;
+    width: calc(100% - 20px);
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #3A95FF; /* כחול בהיר */
+}
+
+/* עיצוב נוסף לקישורים */
+.links {
+    display: flex;
+    justify-content: space-around;
+}
+
+a {
+    background-color: #f0faff; /* כחול רך עם צל */
+    padding: 8px 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+a:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

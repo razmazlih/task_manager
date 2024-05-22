@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./media/icon.jpg" type="image/x-icon">
+    <title>Task Manager</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">
+            <h1 class="header">Task Manager</h1>
+        </div>
+
+        <div class="item links">
+            <a href="./add_task.html">Add Task</a>
+            <a href="./edit_task.html">Edit Task</a>
+        </div>
+
+        <div class="item">
+            <h2 class="header">Tasks</h2>
+        </div>
+        <div id="allTasks" class="item">
+        </div>
+        <div class="item">
+            <button onclick="clearTasks()">Delete All Tasks</button>
+        </div>
+    </div>
+
+
+
+    <script src="./script.js"></script>
+    <script>displayTasks()</script>
+</body>
+
+</html>
